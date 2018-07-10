@@ -8,5 +8,8 @@ creates a cover-letter and cv using pandoc
 4. grab your finished HTML file from the `out` folder
 5. print as PDF
 
+### customizing template
+the template is optimized for my cover-letter and cv, but it can be easily customized by changing the grid-layout in `sccs/app.scss`.
+
 ### Credits
 file-watcher forked from [https://github.com/jamct/panTexter]
