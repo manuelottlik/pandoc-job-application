@@ -1,0 +1,7 @@
+incoming/*
+!incoming/.gitkeep
+!incoming/application-example.md
+
+output/*
+!output/.gitkeep
+!output/application-example.html
