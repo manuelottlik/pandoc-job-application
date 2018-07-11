@@ -1,0 +1,39 @@
+.sender {
+    grid-area: sender;
+    place-self: center end;
+    margin: 0 0 15px 0;
+}
+
+.addressee {
+    grid-area: addressee;
+    margin: 15px 0;
+}
+
+.date {
+    grid-area: date;
+    place-self: center end;
+    margin: 10px 0;
+}
+
+.title {
+    grid-area: title;
+    font-size: 1.4rem;
+    color: $secondaryColor;
+    border-bottom: 1px solid $primaryColor;
+    margin: 15px 0 20px 0;
+}
+
+.text {
+    grid-area: text;
+    line-height: 1.25rem;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.attachments {
+    grid-area: attachments;
+    text-align: justify;
+    b {
+        color: $secondaryColor;
+    }
+}

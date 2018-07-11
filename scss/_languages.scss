@@ -1,0 +1,15 @@
+ .content {
+     font-size: 0.9rem;
+     .entry {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         .text {
+             display: inline-block;
+         }
+         .level {
+             color: $secondaryColor;
+             text-align: left;
+         }
+     }
+ }

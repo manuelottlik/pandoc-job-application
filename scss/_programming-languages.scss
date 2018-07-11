@@ -1,0 +1,8 @@
+.content li {
+    font-size: 0.8rem;
+    display: inline-block;
+    list-style: none;
+    background-color: lightColor($secondaryColor, 35%);
+    padding: 3px;
+    margin: 2px;
+}

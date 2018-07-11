@@ -1,0 +1,29 @@
+.person {
+    grid-area: person;
+    font-size: 3.5rem;
+    color: $secondaryColor;
+    text-transform: uppercase;
+}
+
+.photo {
+    grid-area: photo;
+    background-image: url("../img/portrait.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.contact {
+    grid-area: contact;
+    font-size: 0.85rem;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .contact-info {
+        width: 50%;
+        i {
+            color: $secondaryColor;
+            margin: 0 3px 0 5px;
+        }
+    }
+}

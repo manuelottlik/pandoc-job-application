@@ -5,6 +5,7 @@ creates a cover-letter and cv using pandoc
 1. install [pandoc](https://pandoc.org/installing.html)
 2. run `filer-watcher.ps1`
 3. create your own job-application based on `pandoc-input/job-application-draft.md` or fill in `pandoc-input/job-application-empty.md`
+4. change the images under `/img`
 4. grab your finished HTML file from the `pandoc-output` folder
 5. print as PDF
 6. apply for your dream job and hope for the best!

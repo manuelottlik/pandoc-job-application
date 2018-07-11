@@ -1,0 +1,165 @@
+@import "variables";
+* {
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $fontSize;
+}
+
+body {
+    background-color: #ccc;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $primaryColor;
+    .document {
+        margin: 0 auto;
+        width: 800px;
+        height: calc(800px*1.4142135623730950*2);
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "letter" "cv";
+        grid-gap: 10px;
+        .page {
+            background-color: white;
+            padding: 50px 30px;
+            box-shadow: 0 0 25px 0px #aaa;
+            &.letter {
+                grid-area: letter;
+                display: grid;
+                grid-template-columns: 3fr 4fr 3fr;
+                grid-template-rows: auto auto auto auto 1fr auto auto;
+                grid-template-areas: ". . sender" "addressee . ." ". . date" "title title title" "text text text" "signature . ." "attachments attachments attachments";
+                @import "letter";
+            }
+            &.cv {
+                grid-area: cv;
+                display: grid;
+                grid-gap: 10px 25px;
+                grid-template-columns: 65fr 35fr;
+                grid-template-rows: 180px auto;
+                grid-template-areas: "header header" "left right";
+                @import "cv";
+            }
+        }
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .document {
+        grid-gap: 0px !important;
+    }
+    .page {
+        margin: 0;
+        box-shadow: none !important;
+    }
+}
+
+/*@import "variables";
+* {
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $fontSize;
+}
+
+body {
+    background-color: #ccc;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $primaryColor;
+    .page {
+        margin: 0 auto;
+        width: 800px;
+        height: calc(800px*1.4142135623730950*2);
+        background-color: white;
+        padding: 50px 30px;
+        box-shadow: 0 0 25px 0px #aaa;
+        display: grid;
+        grid-gap: 10px 25px;
+        grid-template-columns: 65fr 35fr;
+        grid-template-rows: 180px auto;
+        grid-template-areas: "header header" "left right";
+        .left, .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &>div {
+                margin-bottom: 10px;
+                .title {
+                    font-size: 1.4rem;
+                    color: $secondaryColor;
+                    border-bottom: 1px solid $primaryColor;
+                }
+                .content {
+                    font-size: 0.9rem;
+                    padding: 5px;
+                }
+            }
+        }
+        .right>div {
+            .content {
+                padding: 10px;
+            }
+        }
+        .header {
+            grid-area: header;
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+            grid-template-columns: 4fr 1fr;
+            grid-template-areas: "person photo" "contact photo";
+            font-size: 3.2rem;
+            @import "header";
+        }
+        .left {
+            grid-area: left;
+        }
+        .right {
+            grid-area: right;
+        }
+        .jobs {
+            @import "jobs";
+        }
+        .education {
+            @import "education";
+        }
+        .strength {
+            @import "strength";
+        }
+        .languages {
+            @import "languages";
+        }
+        .programming-languages {
+            @import "programming-languages";
+        }
+        .hobbies {
+            @import "hobbies";
+        }
+        .certificates {
+            @import "certificates";
+        }
+        .motivation {
+            @import "motivation";
+        }
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        .page {
+            //margin: 0;
+            box-shadow: none;
+        }
+    }
+}
+*/

@@ -1,0 +1,32 @@
+.content {
+    .entry {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "symbol hobby" "symbol date" "description description";
+        margin: 2px 0;
+        @extend .seperating-border;
+        >div {
+            margin: 2px;
+        }
+        .symbol {
+            grid-area: symbol;
+            font-size: 1.4rem;
+            place-self: center;
+            color: $secondaryColor;
+        }
+        .hobby {
+            grid-area: hobby;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .date {
+            grid-area: date;
+            font-size: 0.8rem;
+        }
+        .description {
+            grid-area: description;
+            color: lightColor($primaryColor, 75%);
+        }
+    }
+}

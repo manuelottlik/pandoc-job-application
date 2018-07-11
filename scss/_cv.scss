@@ -1,0 +1,64 @@
+ .left, .right {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     &>div {
+         .title {
+             font-size: 1.4rem;
+             color: $secondaryColor;
+             border-bottom: 1px solid $primaryColor;
+         }
+         .content {
+             font-size: 0.9rem;
+             padding: 5px;
+         }
+     }
+ }
+
+ .right>div {
+     .content {
+         padding: 10px;
+     }
+ }
+
+ .header {
+     grid-area: header;
+     display: grid;
+     grid-template-rows: 2fr 1fr;
+     grid-template-columns: 4fr 1fr;
+     grid-template-areas: "person photo" "contact photo";
+     font-size: 3.2rem;
+     @import "header";
+ }
+
+ .left {
+     grid-area: left;
+     .jobs {
+         @import "jobs";
+     }
+     .education {
+         @import "education";
+     }
+     .certificates {
+         @import "certificates";
+     }
+ }
+
+ .right {
+     grid-area: right;
+     .strength {
+         @import "strength";
+     }
+     .languages {
+         @import "languages";
+     }
+     .programming-languages {
+         @import "programming-languages";
+     }
+     .hobbies {
+         @import "hobbies";
+     }
+     .motivation {
+         @import "motivation";
+     }
+ }

@@ -1,0 +1,20 @@
+$primaryColor: #333333;
+$secondaryColor: blue;
+$secondaryColor: #cc0033;
+//$secondaryColor: #F0AB00;
+//$secondaryColor: #00538f;
+//$secondaryColor: #E20074;
+$fontFamily: "Roboto Condensed";
+$fontSize: 15px;
+@function lightColor($color, $percent) {
+    @return mix($color, #FFFFFF, $percent);
+}
+
+@function darkColor($color, $percent) {
+    @return mix($color, #000000, $percent);
+}
+.seperating-border {
+    &:not(:last-child) {
+        border-bottom: 1px solid lightColor($primaryColor, 25%);
+    }
+}

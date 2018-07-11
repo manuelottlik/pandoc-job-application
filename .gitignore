@@ -1,0 +1,13 @@
+pandoc-input/*
+!pandoc-input/.gitkeep
+!pandoc-input/job-application-example.md
+!pandoc-input/job-application-empty.md
+
+pandoc-output/*
+!pandoc-output/.gitkeep
+
+node_modules
+
+index.html
+
+koala-config.json

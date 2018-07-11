@@ -1,0 +1,170 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>$title$</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-pro/css/all.css" />
+</head>
+
+<body>
+    <div class="document">
+        <div class='page letter'>
+            <div class="addressee">
+                <b>$addressee.name$</b>
+                <br>$addressee.street$
+                <br>$addressee.postal$ $addressee.city$
+            </div>
+            <div class="sender">
+                <b>$sender.name$</b>
+                <br>$sender.street$
+                <br>$sender.postal$ $sender.city$
+                <br>
+                <br>Telefon: $sender.phone$
+                <br>E-Mail: $sender.mail$
+            </div>
+            <div class="date">$date$</div>
+            <div class="title">$title$</div>
+            <div class="text">$body$</div>
+            <div class="attachments">
+                <b>Anlagen:</b> $attachments$</div>
+        </div>
+        <div class='page cv'>
+            <div class="header">
+                <div class="person">$sender.name$</div>
+                <div class="photo"></div>
+                <div class="contact">
+                    <div class='contact-info'>
+                        <i class="fas fa-home"></i> $sender.street$, $sender.postal$ $sender.city$</div>
+                    <div class='contact-info'>
+                        <i class="fas fa-birthday-cake"></i> $sender.birthday$, $sender.birthLocation$</div>
+                    <div class='contact-info'>
+                        <i class="fas fa-phone"></i> $sender.phone$</div>
+                    <div class='contact-info'>
+                        <i class="fas fa-at"></i> $sender.mail$</div>
+                    <div class='contact-info'>
+                        <i class="fab fa-xing"></i> $sender.xing$</div>
+                    <div class='contact-info'>
+                        <i class="fab fa-github"></i> $sender.github$</div>
+                </div>
+            </div>
+            <div class="left">
+                <div class="jobs">
+                    <div class="title">Berufslaufbahn</div>
+                    <div class="content">
+                        $for(job)$
+                        <div class="entry">
+                            <div class="date">
+                                $job.startDate$
+                                <br>-
+                                <br>$job.endDate$</div>
+                            <div class="location">
+                                <i class='fas fa-map-pin'></i> $job.location$</div>
+                            <div class="position">$job.position$</div>
+                            <div class="employer">$job.employer$</div>
+                            <div class="activities">$job.activities$</div>
+                            <div class="link">
+                                <i class='fas fa-link'></i> $job.link$
+                            </div>
+                        </div>
+                        $endfor$
+                    </div>
+                </div>
+                <div class="education">
+                    <div class="title">Ausbildung</div>
+                    <div class="content">
+                        $for(education)$
+                        <div class="entry">
+                            <div class="institution">$education.institution$</div>
+                            <div class="ed-level">$education.edLevel$</div>
+                            <div class="location">
+                                <i class='fas fa-map-pin'></i> $education.location$</div>
+                            <div class="date">
+                                <i class='far fa-calendar-alt'></i> $education.startDate$ - $education.endDate$</div>
+                            <div class="graduation">$education.graduation$</div>
+                        </div>
+                        $endfor$
+                    </div>
+                </div>
+                <div class="certificates">
+                    <div class="title">Bescheinigungen und Zertifikate</div>
+                    <div class="content">
+                        $for(certificate)$
+                        <div class="entry">
+                            <div class="certificate">$certificate.name$</div>
+                            <div class="date">
+                                <i class='far fa-calendar-alt'></i> $certificate.date$</div>
+                        </div>
+                        $endfor$
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="motivation">
+                    <div class="title">Motivation</div>
+                    <div class="content">
+                        $for(motivation)$
+                        <div class="entry">
+                            <div class="symbol $motivation.symbol$"></div>
+                            <div class="text">$motivation.text$</div>
+                        </div>
+                        $endfor$
+                    </div>
+                </div>
+                <div class="strength">
+                    <div class="title">Stärken</div>
+                    <div class="content">
+                        $for(strength)$
+                        <div class='entry'>
+                            <i class="$strength.symbol$"></i>
+                            <div class="text">$strength.text$</div>
+                        </div>
+                        $endfor$
+                    </div>
+                </div>
+                <div class="languages">
+                    <div class="title">Sprachen</div>
+                    <div class="content">
+                        $for(language)$
+                        <div class="entry">
+                            <div class="text">$language.text$</div>
+                            <div class="level">
+                                $for(language.symbol)$
+                                <i class='$language.symbol$'></i>
+                                $endfor$
+                            </div>
+                        </div>
+                        $endfor$
+                    </div>
+                </div>
+                <div class="programming-languages">
+                    <div class="title">technische Kenntnisse</div>
+                    <div class="content">
+                        $for(technology)$
+                        <li>$technology$</li>
+                        $endfor$
+                    </div>
+                </div>
+                <div class="hobbies">
+                    <div class="title">Hobbies</div>
+                    <div class="content">
+                        $for(hobby)$
+                        <div class="entry">
+                            <div class="symbol $hobby.symbol$"></div>
+                            <div class="hobby">$hobby.name$</div>
+                            <div class="description">$hobby.description$</div>
+                            <div class="date">
+                                <i class='far fa-calendar-alt'></i> $hobby.date$</div>
+                        </div>
+                        $endfor$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.content {
+    .entry {
+        display: flex;
+        flex-direction: row;
+        margin: 2px 0;
+        .symbol {
+            font-size: 1.2rem;
+            padding: 5px;
+            color: $secondaryColor;
+        }
+        .text {
+            font-size: 1rem;
+            flex: 1;
+            align-self: center;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.content {
+    .entry {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @extend .seperating-border;@extend .seperating-border;
+        padding: 4px 0;
+        .certificate {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .date {
+            font-size: 0.8rem;
+        }
+    }
+}

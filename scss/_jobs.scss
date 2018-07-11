@@ -1,0 +1,45 @@
+.content {
+    margin: 0 -5px;
+    .entry {
+        display: grid;
+        grid-template-columns: 1fr 3fr 2fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "date job job" "date employer location" "date link link" "activities activities activities";
+        @extend .seperating-border;
+        margin: 2px 0;
+        .job {
+            grid-area: job;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .employer {
+            grid-area: employer;
+            font-size: 1rem;
+            color: $secondaryColor;
+        }
+        .date {
+            grid-area: date;
+            font-size: 0.7rem;
+            margin: 5px;
+            text-align: center;
+            background-color: lightColor($secondaryColor, 25%);
+            padding: 5px;
+            place-self: center;
+        }
+        .location {
+            grid-area: location;
+            font-size: 0.8rem;
+            place-self: center end;
+        }
+        .activities {
+            grid-area: activities;
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            color: lightColor($primaryColor, 75%);
+        }
+        .link {
+            grid-area: link;
+            font-size: 0.7em;
+        }
+    }
+}

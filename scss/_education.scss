@@ -1,0 +1,39 @@
+.content {
+    .entry {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "institution institution graduation" "ed-level ed-level graduation" "date location location";
+        @extend .seperating-border;
+        margin: 2px -5px;
+        >div {
+            margin: 2px 0;
+        }
+        .location {
+            grid-area: location;
+            place-self: center end;
+            font-size: 0.8rem;
+        }
+        .ed-level {
+            grid-area: ed-level;
+            color: $secondaryColor;
+            font-size: 0.95rem;
+        }
+        .date {
+            grid-area: date;
+            font-size: 0.8rem;
+        }
+        .institution {
+            grid-area: institution;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .graduation {
+            grid-area: graduation;
+            font-size: 1.4em;
+            color: $secondaryColor;
+            place-self: center;
+            font-weight: bold;
+        }
+    }
+}
