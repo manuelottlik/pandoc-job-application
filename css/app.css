@@ -54,6 +54,9 @@ body {
           line-height: 1.25rem;
           text-align: justify;
           font-size: 1rem; }
+          body .document .page.letter .text img {
+            display: block;
+            height: 50px; }
         body .document .page.letter .attachments {
           grid-area: attachments;
           text-align: justify; }

@@ -139,7 +139,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempo
 
+
 Mit freundlichen Grüßen
-[Unterschrift](img/unterschrift.png)
+
+![Unterschrift](../img/unterschrift.png)
+
 
 _**PS:** Daten- und Darstellungsschicht gehören getrennt, deshalb wurde diese Bewerbung mit einem eigens entwickelten HTML Template für Pandoc erstellt, das Repository finden Sie unter https://github.com/manuelottlik/pandoc-job-application._
