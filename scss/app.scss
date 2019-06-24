@@ -16,16 +16,17 @@ body {
     .document {
         margin: 0 auto;
         width: 800px;
-        height: calc(800px*1.4142135623730950*2);
+        height: calc(800px*1.4142135623730950*3);
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "letter" "cv";
+        grid-template-areas: "letter" "cv" "tablecv";
         grid-gap: 10px;
         .page {
             background-color: white;
             padding: 50px 30px;
             box-shadow: 0 0 25px 0px #aaa;
+
             &.letter {
                 grid-area: letter;
                 display: grid;
@@ -34,6 +35,7 @@ body {
                 grid-template-areas: ". . sender" "addressee . ." ". . date" "title title title" "text text text" "signature . ." "attachments attachments attachments";
                 @import "letter";
             }
+
             &.cv {
                 grid-area: cv;
                 display: grid;
@@ -43,7 +45,25 @@ body {
                 grid-template-areas: "header header" "left right";
                 @import "cv";
             }
+
+            &.table-cv {
+                grid-area: tablecv;
+                @import "table-cv";
+
+            }
         }
+
+        .section {
+         .title {
+             font-size: 1.4rem;
+             color: $secondaryColor;
+             border-bottom: 1px solid $primaryColor;
+         }
+         .content {
+             font-size: 0.9rem;
+             padding: 5px;
+         }
+     }
     }
 }
 

@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="left">
-                <div class="jobs">
+                <div class="section jobs">
                     <div class="title">Berufslaufbahn</div>
                     <div class="content">
                         $for(job)$
@@ -73,7 +73,7 @@
                         $endfor$
                     </div>
                 </div>
-                <div class="education">
+                <div class="section education">
                     <div class="title">Ausbildung</div>
                     <div class="content">
                         $for(education)$
@@ -89,7 +89,7 @@
                         $endfor$
                     </div>
                 </div>
-                <div class="certificates">
+                <div class="section certificates">
                     <div class="title">Bescheinigungen und Zertifikate</div>
                     <div class="content">
                         $for(certificate)$
@@ -103,7 +103,7 @@
                 </div>
             </div>
             <div class="right">
-                <div class="motivation">
+                <div class="section motivation">
                     <div class="title">Motivation</div>
                     <div class="content">
                         $for(motivation)$
@@ -114,7 +114,7 @@
                         $endfor$
                     </div>
                 </div>
-                <div class="strength">
+                <div class="section strength">
                     <div class="title">Stärken</div>
                     <div class="content">
                         $for(strength)$
@@ -125,7 +125,7 @@
                         $endfor$
                     </div>
                 </div>
-                <div class="languages">
+                <div class="section languages">
                     <div class="title">Sprachen</div>
                     <div class="content">
                         $for(language)$
@@ -140,7 +140,7 @@
                         $endfor$
                     </div>
                 </div>
-                <div class="programming-languages">
+                <div class="section programming-languages">
                     <div class="title">technische Kenntnisse</div>
                     <div class="content">
                         $for(technology)$
@@ -148,7 +148,7 @@
                         $endfor$
                     </div>
                 </div>
-                <div class="hobbies">
+                <div class="section hobbies">
                     <div class="title">Hobbies</div>
                     <div class="content">
                         $for(hobby)$
@@ -164,6 +164,82 @@
                 </div>
             </div>
         </div>
+        <div class="page table-cv">
+            <div class="header">
+                <div class="person">$sender.name$</div>
+                <div class="photo"></div>
+                <div class="contact">
+                    <div class='contact-info'>
+                        <i class="fas fa-home"></i> $sender.street$, $sender.postal$ $sender.city$</div>
+                    <div class='contact-info'>
+                        <i class="fas fa-birthday-cake"></i> $sender.birthday$, $sender.birthLocation$</div>
+                    <div class='contact-info'>
+                        <i class="fas fa-phone"></i> $sender.phone$</div>
+                    <div class='contact-info'>
+                        <i class="fas fa-at"></i> $sender.mail$</div>
+                    <div class='contact-info'>
+                        <i class="fab fa-xing"></i> $sender.xing$</div>
+                    <div class='contact-info'>
+                        <i class="fab fa-github"></i> $sender.github$</div>
+                </div>
+            </div>
+            <table>
+
+                <tr>
+                    <th colspan="2">Berufslaufbahn</th>
+                </tr>
+                $for(job)$
+                <tr>
+                    <td rowspan="2" class="label">$job.startDate$ - $job.endDate$</td>
+                    <td><b>$job.employer$ - $job.position$</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        $job.activities$
+                    </td>
+                </tr>
+                $endfor$
+                <tr>
+                    <th colspan="2">Ausbildung</th>
+                </tr>
+                $for(education)$
+                <tr>
+                    <td rowspan="2" class="label">$education.startDate$ - $education.endDate$</td>
+                    <td><b>$education.edLevel$$if(education.graduation)$ - Abschlussnote
+                            $education.graduation$$endif$</b></td>
+                </tr>
+                <tr>
+                    <td>$education.institution$ in $education.location$</td>
+                </tr>
+                $endfor$
+                <tr>
+                    <th colspan="2">Zertifikate und Bescheinigungen</th>
+                    $for(certificate)$
+                <tr>
+                    <td class="label">$certificate.date$</td>
+                    <td>$certificate.name$</td>
+                </tr>
+                $endfor$
+                </tr>
+                <tr>
+                    <th colspan="2">Interessen und Kenntnisse</th>
+                </tr>
+                <tr>
+                    <td class="label">Sprachen</td>
+                    <td>$for(language)$$language.text$ ($language.level$) $sep$, $endfor$</td>
+                </tr>
+                <tr>
+                    <td class="label">EDV-Kenntnisse</td>
+                    <td>$for(technology)$$technology$$sep$, $endfor$</td>
+                </tr>
+                <tr>
+                    <td class="label">Hobbies</td>
+                    <td>$for(hobby)$$hobby.name$$sep$, $endfor$</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
     </div>
 </body>
 

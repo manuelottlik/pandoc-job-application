@@ -2,17 +2,7 @@
      display: flex;
      flex-direction: column;
      justify-content: space-between;
-     &>div {
-         .title {
-             font-size: 1.4rem;
-             color: $secondaryColor;
-             border-bottom: 1px solid $primaryColor;
-         }
-         .content {
-             font-size: 0.9rem;
-             padding: 5px;
-         }
-     }
+     
  }
 
  .right>div {

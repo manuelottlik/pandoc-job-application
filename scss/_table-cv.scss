@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+             font-size: 1.4rem;
+             color: $secondaryColor;
+             text-align: left;
+             padding-top: 7.5px;
+             font-weight: normal;
+             border-bottom: 1px solid $primaryColor;
+         }
+    td {
+        &.label {
+            font-weight: bold;
+            white-space: nowrap;
+            font-size: 0.9em;
+        }
+     
+        padding: 5px 7.5px;
+    }
+}
+
+ .header {
+     display: grid;
+     grid-template-rows: 2fr 1fr;
+     grid-template-columns: 4fr 1fr;
+     grid-template-areas: "person photo" "contact photo";
+     font-size: 3.2rem;
+     height: 180px;
+     @import "header";
+ }

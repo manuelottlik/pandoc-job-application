@@ -16,11 +16,11 @@ body {
   body .document {
     margin: 0 auto;
     width: 800px;
-    height: calc(800px*1.4142135623730950*2);
+    height: calc(800px*1.4142135623730950*3);
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: "letter" "cv";
+    grid-template-areas: "letter" "cv" "tablecv";
     grid-gap: 10px; }
     body .document .page {
       background-color: white;
@@ -46,12 +46,12 @@ body {
         body .document .page.letter .title {
           grid-area: title;
           font-size: 1.4rem;
-          color: #cc0033;
+          color: #dc3c05;
           border-bottom: 1px solid #333333;
           margin: 15px 0 20px 0; }
         body .document .page.letter .text {
           grid-area: text;
-          line-height: 1.25rem;
+          line-height: 1.35rem;
           text-align: justify;
           font-size: 1rem; }
           body .document .page.letter .text img {
@@ -61,7 +61,7 @@ body {
           grid-area: attachments;
           text-align: justify; }
           body .document .page.letter .attachments b {
-            color: #cc0033; }
+            color: #dc3c05; }
       body .document .page.cv {
         grid-area: cv;
         display: grid;
@@ -73,13 +73,6 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: space-between; }
-          body .document .page.cv .left > div .title, body .document .page.cv .right > div .title {
-            font-size: 1.4rem;
-            color: #cc0033;
-            border-bottom: 1px solid #333333; }
-          body .document .page.cv .left > div .content, body .document .page.cv .right > div .content {
-            font-size: 0.9rem;
-            padding: 5px; }
         body .document .page.cv .right > div .content {
           padding: 10px; }
         body .document .page.cv .header {
@@ -92,7 +85,7 @@ body {
           body .document .page.cv .header .person {
             grid-area: person;
             font-size: 3.5rem;
-            color: #cc0033;
+            color: #dc3c05;
             text-transform: uppercase; }
           body .document .page.cv .header .photo {
             grid-area: photo;
@@ -109,7 +102,7 @@ body {
             body .document .page.cv .header .contact .contact-info {
               width: 50%; }
               body .document .page.cv .header .contact .contact-info i {
-                color: #cc0033;
+                color: #dc3c05;
                 margin: 0 3px 0 5px; }
         body .document .page.cv .left {
           grid-area: left; }
@@ -128,13 +121,13 @@ body {
               body .document .page.cv .left .jobs .content .entry .employer {
                 grid-area: employer;
                 font-size: 1rem;
-                color: #cc0033; }
+                color: #dc3c05; }
               body .document .page.cv .left .jobs .content .entry .date {
                 grid-area: date;
                 font-size: 0.7rem;
                 margin: 5px;
                 text-align: center;
-                background-color: #f2bfcc;
+                background-color: #f6cec1;
                 padding: 5px;
                 place-self: center; }
               body .document .page.cv .left .jobs .content .entry .location {
@@ -163,7 +156,7 @@ body {
               font-size: 0.8rem; }
             body .document .page.cv .left .education .content .entry .ed-level {
               grid-area: ed-level;
-              color: #cc0033;
+              color: #dc3c05;
               font-size: 0.95rem; }
             body .document .page.cv .left .education .content .entry .date {
               grid-area: date;
@@ -175,7 +168,7 @@ body {
             body .document .page.cv .left .education .content .entry .graduation {
               grid-area: graduation;
               font-size: 1.4em;
-              color: #cc0033;
+              color: #dc3c05;
               place-self: center;
               font-weight: bold; }
           body .document .page.cv .left .certificates .content .entry {
@@ -205,11 +198,11 @@ body {
                 padding: -1px 0 3px 0;
                 font-weight: bold;
                 text-align: center;
-                border: 2px solid #cc0033;
+                border: 2px solid #dc3c05;
                 border-radius: 50%;
-                color: #cc0033; }
+                color: #dc3c05; }
               body .document .page.cv .right .strength .content .entry i {
-                color: #cc0033; }
+                color: #dc3c05; }
               body .document .page.cv .right .strength .content .entry .text {
                 display: inline-block; }
           body .document .page.cv .right .languages .content {
@@ -221,13 +214,13 @@ body {
               body .document .page.cv .right .languages .content .entry .text {
                 display: inline-block; }
               body .document .page.cv .right .languages .content .entry .level {
-                color: #cc0033;
+                color: #dc3c05;
                 text-align: left; }
           body .document .page.cv .right .programming-languages .content li {
             font-size: 0.8rem;
             display: inline-block;
             list-style: none;
-            background-color: #eda6b8;
+            background-color: #f3bba8;
             padding: 3px;
             margin: 2px; }
           body .document .page.cv .right .hobbies .content .entry {
@@ -242,7 +235,7 @@ body {
               grid-area: symbol;
               font-size: 1.4rem;
               place-self: center;
-              color: #cc0033; }
+              color: #dc3c05; }
             body .document .page.cv .right .hobbies .content .entry .hobby {
               grid-area: hobby;
               font-size: 0.9rem;
@@ -260,11 +253,65 @@ body {
             body .document .page.cv .right .motivation .content .entry .symbol {
               font-size: 1.2rem;
               padding: 5px;
-              color: #cc0033; }
+              color: #dc3c05; }
             body .document .page.cv .right .motivation .content .entry .text {
               font-size: 1rem;
               flex: 1;
               align-self: center; }
+      body .document .page.table-cv {
+        grid-area: tablecv; }
+        body .document .page.table-cv table {
+          width: 100%;
+          border-collapse: collapse; }
+          body .document .page.table-cv table th {
+            font-size: 1.4rem;
+            color: #dc3c05;
+            text-align: left;
+            padding-top: 7.5px;
+            font-weight: normal;
+            border-bottom: 1px solid #333333; }
+          body .document .page.table-cv table td {
+            padding: 5px 7.5px; }
+            body .document .page.table-cv table td.label {
+              font-weight: bold;
+              white-space: nowrap;
+              font-size: 0.9em; }
+        body .document .page.table-cv .header {
+          display: grid;
+          grid-template-rows: 2fr 1fr;
+          grid-template-columns: 4fr 1fr;
+          grid-template-areas: "person photo" "contact photo";
+          font-size: 3.2rem;
+          height: 180px; }
+          body .document .page.table-cv .header .person {
+            grid-area: person;
+            font-size: 3.5rem;
+            color: #dc3c05;
+            text-transform: uppercase; }
+          body .document .page.table-cv .header .photo {
+            grid-area: photo;
+            background-image: url("../img/portrait.jpg");
+            background-size: cover;
+            background-position: center; }
+          body .document .page.table-cv .header .contact {
+            grid-area: contact;
+            font-size: 0.85rem;
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between; }
+            body .document .page.table-cv .header .contact .contact-info {
+              width: 50%; }
+              body .document .page.table-cv .header .contact .contact-info i {
+                color: #dc3c05;
+                margin: 0 3px 0 5px; }
+    body .document .section .title {
+      font-size: 1.4rem;
+      color: #dc3c05;
+      border-bottom: 1px solid #333333; }
+    body .document .section .content {
+      font-size: 0.9rem;
+      padding: 5px; }
 
 @media print {
   body {

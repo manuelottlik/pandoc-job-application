@@ -1,9 +1,14 @@
 $primaryColor: #333333;
 $secondaryColor: blue;
 $secondaryColor: #cc0033;
-//$secondaryColor: #F0AB00;
-//$secondaryColor: #00538f;
-//$secondaryColor: #E20074;
+$secondaryColor: #F0AB00;
+$secondaryColor: #002B59;
+$secondaryColor: #002960;
+$secondaryColor: #CC0001;
+$secondaryColor: #181818;
+$secondaryColor: #E20074;
+$secondaryColor: #cc0033;
+$secondaryColor: #dc3c05;
 $fontFamily: "Roboto Condensed";
 $fontSize: 15px;
 @function lightColor($color, $percent) {
@@ -13,6 +18,7 @@ $fontSize: 15px;
 @function darkColor($color, $percent) {
     @return mix($color, #000000, $percent);
 }
+
 .seperating-border {
     &:not(:last-child) {
         border-bottom: 1px solid lightColor($primaryColor, 25%);
