@@ -6,6 +6,9 @@ pandoc-input/*
 pandoc-output/*
 !pandoc-output/.gitkeep
 
+img/*
+!img/.gitkeep
+
 node_modules
 
 index.html
